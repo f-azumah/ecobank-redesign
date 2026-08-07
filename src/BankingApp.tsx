@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowLeftRight, ChevronDown, ChevronUp, CircleUserRound, DollarSign, Eye, EyeOff, Phone, QrCode, Receipt, Smartphone, Split} from 'lucide-react'
+import { ArrowLeftRight, Bell, ChevronDown, ChevronUp, CircleUserRound, CreditCard, DollarSign, Eye, EyeOff, Home, MoreHorizontal, Phone, QrCode, Receipt, Smartphone, Split, TrendingUp} from 'lucide-react'
 
 interface Account {
     id: string
@@ -30,7 +30,7 @@ export default function BankingApp(){
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-200 p-8">
             <div className="relative bg-black rounded-[3rem] p-3 shadow-2xl">
-                <div className="w-[390px] h-[844px] bg-gray-50 rounded-[2.5rem] overflow-hidden overflow-y-auto">
+                <div className="w-[390px] h-[844px] bg-gray-50 rounded-[2.5rem] overflow-hidden overflow-y-auto relative">
                     <div className="bg-cyan-700 px-4 pt-6 pb-48">
                         <div className="flex justify-between items-center">
                             <Phone size={20} className="text-white"/>
@@ -43,7 +43,7 @@ export default function BankingApp(){
                         <div className="h-0.25 bg-lime-500 -mx-4 mt-4"></div>
                         <h2 className="text-white font-bold text-xl mt-8 place-self-center">Welcome back, Jane👋</h2>
                     </div>
-                    <div className="bg-white rounded-2xl mx-4 -mt-38 overflow-hidden">
+                    <div className="bg-white shadow-md rounded-2xl mx-4 -mt-38 overflow-hidden">
                         <div className="bg-lime-500 px-4 py-3 flex justify-between items-center">
                             <h2 className="font-bold text-black">MY ACCOUNTS</h2>
                         </div>
@@ -98,6 +98,14 @@ export default function BankingApp(){
                             </div>
                         </div>
                             
+                    </div>
+
+                    <div className="flex justify-around items-center border-t border-gray-200 bg-white py-3 absolute bottom-0 left-0 right-0 mt-auto ">
+                        <Home size={22} className="text-cyan-600 transition-colors duration-150 active:text-cyan-900 hover:text-cyan-900" />
+                        <CreditCard size={22} className="text-cyan-600 transition-colors duration-150 active:text-cyan-900 hover:text-cyan-900" />
+                        <TrendingUp size={22} className="text-cyan-600 transition-colors duration-150 active:text-cyan-900 hover:text-cyan-900" />
+                        <Bell size={22} className="text-cyan-600 transition-colors duration-150 active:text-cyan-900 hover:text-cyan-900" />
+                        <MoreHorizontal size={22} className="text-cyan-600 transition-colors duration-150 active:text-cyan-900 hover:text-cyan-900" />
                     </div>
                 </div>
                 <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 mt-1 h-6 bg-black rounded-full"></div>
